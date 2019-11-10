@@ -11,7 +11,7 @@
     
     
     
-    <title>archive_a | 小小程序员的博客</title>
+    <title>HTML标签 | 小小程序员的博客</title>
     <link href="https://drshuang.github.io" rel="prefetch" />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -98,7 +98,7 @@
                 
                 
                 
-                <li class="current">
+                <li class="">
                     <a href="/archives">
                         <i class="fa fa-archive"></i>归档
                     </a>
@@ -153,19 +153,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <article class="article well article-body" id="article-archive">
+                    
+<article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="https://drshuang.github.io">小小程序员的博客</a>
         >
-        <span>归档</span>
+        <span>HTML标签</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/archives">归档</a>
+                <a href="/2019/11/10/HTML%E6%A0%87%E7%AD%BE/">HTML标签</a>
             </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/%E6%A0%87%E7%AD%BE/">标签</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2019-11-10
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -173,35 +188,97 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/archives">归档</a>
+                    <a href="/2019/11/10/HTML%E6%A0%87%E7%AD%BE/">HTML标签</a>
                 </h4>
             </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2019-11-10
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/%E6%A0%87%E7%AD%BE/">标签</a>
+                
+                
+                
+            </p>
         </center>
     </div>
-    <div class="content-article" style="margin-top: 30px;">
-        
-        
-            <h1 style="font-size: 24px; margin-top: 40px;">2019年</h1>
-            
-        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
-            
-             
-             
-                        <a href="/2019/11/10/HTML%E6%A0%87%E7%AD%BE/">HTML标签</a>
-                        <br>
-            
-             
-                        <a href="/2019/11/06/%E4%B8%80%E6%9D%AF%E7%88%B1%E7%9A%84%E6%84%9F%E5%8A%A8/">一杯爱的感动</a>
-                        <br>
-            
-             
-                        <a href="/2019/11/05/hello-world/">Hello World</a>
-                        <br>
-            
-                    </div>
-        
+    <div class="content-article">
+        <h1 id="HTML常用标签"><a href="#HTML常用标签" class="headerlink" title="HTML常用标签"></a>HTML常用标签</h1><a id="more"></a>
+<h2 id="head标签-title标签-body标签"><a href="#head标签-title标签-body标签" class="headerlink" title="head标签 title标签 body标签"></a><strong>head标签 title标签 body标签</strong></h2><p>head位于html网页的头部，<code>&lt;html&gt;</code>后<code>&lt;body&gt;</code>前的标签，并<code>&lt;head&gt;</code>开头<code>&lt;/head&gt;</code>结尾，<code>&lt;head&gt;</code>包含标签<code>&lt;meta&gt;</code>、<code>&lt;title&gt;</code>、<code>&lt;base&gt;</code>、<code>&lt;script&gt;</code>等常用标签<br>head包含标签说明<br>title是网页唯一标题标签 -title标签<br>base是网页默认打开方式声明标签 base<br>link是一个链接标签，包括外部css文件引用、js文件引用、favicon.ico图标引用等作用<br>meta包含广泛的内容标签，如网页关键字、网页介绍、作者、网页编码、robots、自动跳转等声明及说明标签。<br>script是引入外部js文件作用<br>style直接嵌入网页的js或css文件标签。<br>body是html网页结构最重要的标签，也叫主体内容标签。  </p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a><strong>语法</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;标题&lt;/title&gt;</span><br><span class="line">        &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        主体内容</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="标题标签"><a href="#标题标签" class="headerlink" title="标题标签"></a><strong>标题标签</strong></h3><p>HTML共提供六级标题<code>&lt;h1&gt;</code>~<code>&lt;h6&gt;</code>，并赋予了一定的外观，所有标题字体加粗，其中<code>&lt;h1&gt;</code>字号最大，<code>&lt;h6&gt;</code>字号最小，并且独占一行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1&gt;一级标题&lt;/h1&gt;</span><br><span class="line">&lt;h2&gt;二级标题&lt;/h2&gt;</span><br><span class="line">&lt;h3&gt;三级标题&lt;/h3&gt;</span><br><span class="line">&lt;h4&gt;四级标题&lt;/h4&gt;</span><br><span class="line">&lt;h5&gt;五级标题&lt;/h5&gt;</span><br><span class="line">&lt;h6&gt;六级标题&lt;/h6&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="段落标签"><a href="#段落标签" class="headerlink" title="段落标签"></a><strong>段落标签</strong></h3><p>段落标签以<code>&lt;P&gt;</code>开头以<code>&lt;/P&gt;</code>结尾，在P标签内的内容为一个段落，独占一行或几行，并且段与段之间有一行空行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;h2&gt;水调歌头·明月几时有&lt;/h2&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">明月几时有？把酒问青天。</span><br><span class="line">不知天上宫阙，今夕是何年。</span><br><span class="line">我欲乘风归去，又恐琼楼玉宇，高处不胜寒。</span><br><span class="line">起舞弄清影，何似在人间？</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">转朱阁，低绮户，照无眠。</span><br><span class="line">不应有恨，何事长向别时圆？</span><br><span class="line">人有悲欢离合，月有阴晴圆缺，此事古难全</span><br><span class="line">。但愿人长久，千里共婵娟。</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<img src="image/biao1.jpg"/>   
+
+<h3 id="段落标签-1"><a href="#段落标签-1" class="headerlink" title="段落标签"></a><strong>段落标签</strong></h3><p>换行标签<code>&lt;br/&gt;</code>表示强制换行显示，该标签比较特殊，没有结束标签，直接使用<code>&lt;br/&gt;</code>表示开始和结束。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;h2&gt;水调歌头·明月几时有&lt;/h2&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">明月几时有？把酒问青天。&lt;br/&gt;</span><br><span class="line">不知天上宫阙，今夕是何年。&lt;br/&gt;</span><br><span class="line">我欲乘风归去，又恐琼楼玉宇，高处不胜寒。&lt;br/&gt;</span><br><span class="line">起舞弄清影，何似在人间？&lt;br/&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">转朱阁，低绮户，照无眠。&lt;br/&gt;</span><br><span class="line">不应有恨，何事长向别时圆？&lt;br/&gt;</span><br><span class="line">人有悲欢离合，月有阴晴圆缺，此事古难全。&lt;br/&gt;</span><br><span class="line">但愿人长久，千里共婵娟。&lt;br/&gt;</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<img src="image/biao2.jpg"/>
+
+<h3 id="水平线标签"><a href="#水平线标签" class="headerlink" title="水平线标签"></a><strong>水平线标签</strong></h3><p>顾名思义，水平线标签<code>&lt;hr/&gt;</code>表示已条水平线，该标签和<code>&lt;hr/&gt;</code>一样没有结束标签。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;h2&gt;水调歌头·明月几时有&lt;/h2&gt;</span><br><span class="line">&lt;hr/&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">明月几时有？把酒问青天。&lt;br/&gt;</span><br><span class="line">不知天上宫阙，今夕是何年。&lt;br/&gt;</span><br><span class="line">我欲乘风归去，又恐琼楼玉宇，高处不胜寒。&lt;br/&gt;</span><br><span class="line">起舞弄清影，何似在人间？&lt;br/&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">转朱阁，低绮户，照无眠。&lt;br/&gt;</span><br><span class="line">不应有恨，何事长向别时圆？&lt;br/&gt;</span><br><span class="line">人有悲欢离合，月有阴晴圆缺，此事古难全。&lt;br/&gt;</span><br><span class="line">但愿人长久，千里共婵娟。&lt;br/&gt;</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<img src="image/biao3.png"/>
+
+<h3 id="字体样式标签"><a href="#字体样式标签" class="headerlink" title="字体样式标签"></a><strong>字体样式标签</strong></h3><p>加粗字体可以使用<code>&lt;strong&gt;&lt;/strong&gt;</code>标签，字体倾斜<code>&lt;em&gt;&lt;/em&gt;</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;h2&gt;水调歌头·明月几时有&lt;/h2&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">&lt;strong&gt;明月几时有？把酒问青天。&lt;/strong&gt;&lt;br/&gt;</span><br><span class="line">&lt;em&gt;不知天上宫阙，今夕是何年。&lt;/em&gt;&lt;br/&gt;</span><br><span class="line">我欲乘风归去，又恐琼楼玉宇，高处不胜寒。&lt;br/&gt;</span><br><span class="line">起舞弄清影，何似在人间？&lt;br/&gt;</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<img src="image/biao4.png"/>
+
+<h3 id="注释和特殊符号"><a href="#注释和特殊符号" class="headerlink" title="注释和特殊符号"></a><strong>注释和特殊符号</strong></h3><p>注释是为了方便代码阅读和调试。当浏览器遇到注释是会自动忽略注释内容。注释用`<!-- -->表示。<br>在网页上还有一些比较特殊的符号比如”&lt;”、”&gt;”等等。   </p>
+<table>
+<thead>
+<tr>
+<th align="center">特殊符号</th>
+<th align="center">字符实体</th>
+<th align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th align="left">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">空格</td>
+<td align="center">&amp;nbsp；</td>
+<td align="left"></td>
+<td align="left"><code>&lt;a href=&quot;#&quot;&gt;百度&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;a href=&quot;#&quot;&gt;Baidu&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td align="center">大于号（&gt;）</td>
+<td align="center">&amp;gt；</td>
+<td align="left"></td>
+<td align="left">8  &amp;gt；6</td>
+</tr>
+<tr>
+<td align="center">小于号（&lt;）</td>
+<td align="center">&amp;lt；</td>
+<td align="left"></td>
+<td align="left">8  &amp;lt；10</td>
+</tr>
+<tr>
+<td align="center">引号（”）</td>
+<td align="center">&amp;quot；</td>
+<td align="left"></td>
+<td align="left">&amp;quot；早上好  &amp;quot；</td>
+</tr>
+<tr>
+<td align="center">版权符号（©）</td>
+<td align="center">&amp;copy；</td>
+<td align="left"></td>
+<td align="left">&amp;copy；2019 <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a></td>
+</tr>
+<tr>
+<td align="center"><img src="image/biao5.png"/></td>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
     </div>
 </article>
+
+
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -319,17 +396,17 @@
 
                 
                 <li>
-                    <a href="/archives/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2019/11/10/HTML%E6%A0%87%E7%AD%BE/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/archives/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2019/11/10/HTML%E6%A0%87%E7%AD%BE/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/archives/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2019/11/10/HTML%E6%A0%87%E7%AD%BE/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -337,7 +414,7 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/%E6%A0%87%E7%AD%BE/" style="font-size: 13.748673168072033px;" class="tag-cloud-link">标签</a>
+    <a href="/tags/%E6%A0%87%E7%AD%BE/" style="font-size: 19.151425749527924px;" class="tag-cloud-link">标签</a>
     
 </div>
                 
