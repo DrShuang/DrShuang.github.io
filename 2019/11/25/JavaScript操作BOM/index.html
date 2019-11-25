@@ -13,7 +13,7 @@
     
     
     
-    <title>JavaScript基础篇 | 小小程序员的博客</title>
+    <title>JavaScript操作BOM | 小小程序员的博客</title>
     <link href="https://drshuang.github.io" rel="prefetch" />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -169,13 +169,13 @@
         <i class="fa fa-home"></i>
         <a href="https://drshuang.github.io">小小程序员的博客</a>
         >
-        <span>JavaScript基础篇</span>
+        <span>JavaScript操作BOM</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/2019/11/24/Javascript%E5%9F%BA%E7%A1%80/">JavaScript基础篇</a>
+                <a href="/2019/11/25/JavaScript%E6%93%8D%E4%BD%9CBOM/">JavaScript操作BOM</a>
             </h1>
         </div>
         <div class="tag-article">
@@ -188,7 +188,7 @@
             </span>
             
             <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2019-11-24
+                <i class="fa fa-calendar"></i> 2019-11-25
             </span>
             
         </div>
@@ -198,11 +198,11 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/2019/11/24/Javascript%E5%9F%BA%E7%A1%80/">JavaScript基础篇</a>
+                    <a href="/2019/11/25/JavaScript%E6%93%8D%E4%BD%9CBOM/">JavaScript操作BOM</a>
                 </h4>
             </div>
             <p>
-                <i class="fa fa-calendar"></i> 2019-11-24
+                <i class="fa fa-calendar"></i> 2019-11-25
             </p>
             <p>
                 
@@ -216,251 +216,427 @@
         </center>
     </div>
     <div class="content-article">
-        <h1 id="什么是-Javascript"><a href="#什么是-Javascript" class="headerlink" title="什么是 Javascript"></a>什么是 Javascript</h1><p>&emsp;&emsp;Javascript是一种描述性语言，也是一种基于对象( Object)和事件驱动( Event Driven)的.并<br>具有安全性能的脚本语言。它与HTML(超文本标记语言)一起。在一个Web页面中链接多个对象<br>与Wb客户实现交互。无论在客户端还是在服务器端， Javascript I应用程序都要下载到浏览器的客户<br>端执行，从而减轻了服务器端的负担。总结其特点如下   </p>
+        <h1 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h1><p>浏览器对象模型(BOM)是 Javascript a的组成之一，它提供了独立于内容与浏览器窗口进行交互的对象，使用浏览器对象模型可以实现与HTML的交互。它的作用是将相关的元素组织包装起来,提供给程序设计人员使用，从而降低开发人员的劳动量.提高设计Web页面的能力。BOM是一个分层结构。<br>window对象是整个BOM的核心.在浏览器中打开网页后.首先看到的是浏览器窗口.即顶层的 window对象:其次是网页文档内容.即 document(文档)。它的内容包括一些超链接(link)、表单(fam)、( anchor)等，表单由文本框(text)、单选按钮( radio)、按钮( button)等表单元素组成。在浏览器对象结构中，除了document对象外， window对象之下还有两个对象:地址对象(caon)和历史对象( history).它们对应于浏览器地址栏和前进/后退按钮，我们可以利用这些对象的方法，实现类似的功能。使用BOM通常可实现如下功能。</p>
 <ol>
-<li>Javascript主要用来在HTML页面中添加交互行为。  </li>
-<li>Javascript是一种脚本语言，语法和Java类似。   </li>
-<li>Javascript一般用来编写客户端的脚本。   </li>
-<li>Java  7 cript是一种解释性语音,边编译边执行。</li>
+<li>弹出新的浏览器窗口。</li>
+<li>移动、关闭浏览器窗口及调整窗口的大小。</li>
+<li>在测览器窗口中实现页面的前进、后退功能。<br>window对象也称为浏览器对象。当浏览器打开HTML文档时，通常会创建一个window对象。如果文档定义了一个或多个框架，浏览器将为原始文档创建一个 window对象，同时为每个框架另外创建一个 window对象。  </li>
 </ol>
-<h1 id="Javascript的组成"><a href="#Javascript的组成" class="headerlink" title="Javascript的组成"></a>Javascript的组成</h1><p>&emsp;&emsp;尽管 Cmascript是一个重要的标准，但它并不是 Javascript I唯一的部分，当然，它也不是唯一<br>被标准化的部分。实际上，一个完整的 Javascript是由以下三个不同的部分组成的：ECMAScript、BOM、DOM。</p>
-<p>一、Ecmascript标准<br>Ecmascript是一种开放的、被国际上广为接受的、标准的脚本语言规范。它不与任何具体的浏<br>览器绑定。 Ecmascript 7标准主要描述了以下内容。</p>
-<ol>
-<li>语法</li>
-<li>变量和数据类型</li>
-<li>运算符</li>
-<li>逻辑控制语句</li>
-<li>关键字、保留字</li>
-<li>对象</li>
-</ol>
-<p>ECMASCRIPT是一个描述，规定了脚本语言的所有属性、方法和对象的标准，因此在使用Web客<br>白端脚本语言编码时一定要遵循 Ecmascript标准。</p>
-<p>二、浏览器对象模型<br>&emsp;&emsp;浏览器对象模型( Browser Object Model，BoM)，提供了独立于内容与浏览器窗口进行交互的对<br>象，使用浏览器对象模型可以实现与 HTML的交互，如网上常见的弹出窗口.前进后退等功能都是<br>浏览器对象控制的  </p>
-<p>三、文档对象模型<br>&emsp;&emsp;文档对象模型( Document Object Model，DOM)，是HTML文档对象模型( HTML DON)定义的一套标准方法，用来访问和操纵HTML文档，如网上商城常见的随鼠标移动显示大的图片、弹出小提示等都是文档对象的功劳。  </p>
-<h2 id="Javascript的基本结构"><a href="#Javascript的基本结构" class="headerlink" title="Javascript的基本结构"></a>Javascript的基本结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/Javascript&quot;&gt;</span><br><span class="line">    javaScript语句;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="Javascript引入方式"><a href="#Javascript引入方式" class="headerlink" title="Javascript引入方式"></a>Javascript引入方式</h2><p>内部引入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/Javascript&quot;&gt;</span><br><span class="line">    javaScript语句;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>外部引入  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/Javascript src=&quot;Javascript文件地址&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="Javascript核心语法"><a href="#Javascript核心语法" class="headerlink" title="Javascript核心语法"></a>Javascript核心语法</h2><p>变量的声明和赋值<br>&emsp;&emsp;声明：var 变量名;<br>&emsp;&emsp;赋值：变量名=值;<br>边声明边赋值<br>var 变量名=值;<br>&emsp;&emsp;var 变量名1=值，变量名2=值，……;<br>数据类型<br>&emsp;&emsp;在JavaScript中声明时不需要声明变量的数据类型，而是有赋值的变量值决定，在JavaScript中提供的数据类型有一下几种：</p>
-<ol>
-<li>undefined(未定义类型)</li>
-<li>null(空类型)</li>
-<li>number(数值类型)</li>
-<li>String(字符串类型)</li>
-<li>boolean(布尔类型)  </li>
-</ol>
-<p>ECMAScript提供了typeof运算符来判断一个值或变量的数据类型<br>&emsp;&emsp;typeof(变量或值)<br>其返回结果有以下几种。  </p>
-<ol>
-<li>undefined:如果变量是 undefined类型的，则返回 undefined类型的结果  </li>
-<li>number:如果变量是 number类型的，则返回 number类型的结果  </li>
-<li>String:如果变量是 String类型的，则返回 string类型的结果。  </li>
-<li>boolean:如果变量是 boolean类型的，则返回 boolean类型的结果</li>
-<li>object：如果变量是nul类型，或者变量是一种引用类型，如对象、函数、数组，则返回object类型的结果<br>在number中有个特殊值NaN（not a number）表示非数  </li>
-</ol>
-<p>String类型<br>方法：字符串对象.方法名（）；  </p>
-<table>
+<h2 id="常用属性"><a href="#常用属性" class="headerlink" title="常用属性"></a>常用属性</h2><table>
 <thead>
 <tr>
-<th align="left">方法</th>
+<th align="right">名称</th>
+<th>&emsp;</th>
 <th align="left">描述</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">charAt(undex)</td>
-<td align="left">返回指定位置的字符</td>
+<td align="right">history</td>
+<td></td>
+<td align="left">有关客户访问过的URL的信息</td>
 </tr>
 <tr>
-<td align="left">indexof(str，index)</td>
-<td align="left">查找某个字符在字符串中的位置</td>
+<td align="right">location</td>
+<td></td>
+<td align="left">有关当前URL的信息</td>
 </tr>
 <tr>
-<td align="left">substring(index1,index2)</td>
-<td align="left">返回指定索引index1和index2之间的字符（返回的字符串包含index1不包含index2）</td>
+<td align="right">screen</td>
+<td></td>
+<td align="left">只读属性，包含有关客户端显示屏幕的信息</td>
 </tr>
 <tr>
-<td align="left">split(str)</td>
-<td align="left">将字符串分割字符串数组</td>
-</tr>
-<tr>
-<td align="left">length</td>
-<td align="left">返回字符串的长度</td>
-</tr>
-<tr>
-<td align="left"><br/></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">数组</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">创建数组：var 数组名=new Array（数组长度）；</td>
+<td align="right"><br/></td>
+<td></td>
 <td align="left"></td>
 </tr>
 </tbody></table>
-<p>赋值：  </p>
-<ol>
-<li>var 数组名=new Array（值1，值2，…）；</li>
-<li>var 数组名=new Array（数组长度）；<br>数组名[下标]=值；</li>
-</ol>
-<table>
+<p>语法： window.属性名=“属性值”  </p>
+<blockquote>
+<p>例：window.location=”<a href="http://www.baidu.com&quot;" target="_blank" rel="noopener">http://www.baidu.com&quot;</a>;</p>
+</blockquote>
+<h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><table>
 <thead>
 <tr>
-<th align="left">方法</th>
-<th>&emsp;&emsp;</th>
+<th align="right">名称</th>
+<th>&emsp;</th>
 <th align="left">描述</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">length</td>
+<td align="right">prompt（）</td>
 <td></td>
-<td align="left">设置或返回数组中元素的数目</td>
+<td align="left">显示可提示用户输入的对话框</td>
 </tr>
 <tr>
-<td align="left">jion()</td>
+<td align="right">alert（）</td>
 <td></td>
-<td align="left">把数组的所有元素放入一个字符串，通过分隔符进分割</td>
+<td align="left">显示一个带有提示信息和一个”确定“按钮的警示对话框</td>
 </tr>
 <tr>
-<td align="left">sort()</td>
+<td align="right">confirm（）</td>
 <td></td>
-<td align="left">对数组排序</td>
+<td align="left">显示一个带有提示信息、“确定”和“取消”按钮的对话框</td>
 </tr>
 <tr>
-<td align="left">push()</td>
+<td align="right">close（）</td>
 <td></td>
-<td align="left">向数组末尾添加一个或更多元素，并返回新的长度</td>
+<td align="left">关闭浏览器窗口</td>
 </tr>
 <tr>
-<td align="left"><br/></td>
+<td align="right">open（）</td>
 <td></td>
-<td align="left"></td>
+<td align="left">打开一个新的浏览器窗口，加载给定的URL所指定的文档</td>
 </tr>
 <tr>
-<td align="left">运算符</td>
+<td align="right">setTimeout（）</td>
 <td></td>
-<td align="left"></td>
+<td align="left">在指定的毫秒数后调用函数或计算表达式</td>
+</tr>
+<tr>
+<td align="right">setInterval（）</td>
+<td></td>
+<td align="left">按照指定的周期（毫秒）来调用函数或表达式</td>
+</tr>
+</tbody></table>
+<p>语法：window.方法名（）；</p>
+<blockquote>
+<p>例：window.alert();</p>
+</blockquote>
+<p>confirm()与alert（）、prompt（）的区别  </p>
+<table>
+<thead>
+<tr>
+<th>alert（）</th>
+<th>&emsp;</th>
+<th>一个参数，仅显示警告对话框的消息，无返回值，不能对脚本产生任何改变</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>prompt（）</td>
+<td></td>
+<td>两个参数，输入对话框，用来提示用户输入一些信息，单击取消按钮返回null，单击确定按钮返回用户输入的信息</td>
+</tr>
+<tr>
+<td>confirm（）</td>
+<td></td>
+<td>一个参数，确认对话框，显示提示对话框的消息、确定和返回按钮，单击确认按钮返回true，单击取消按钮返回false，因此与if-else搭配使用</td>
+</tr>
+</tbody></table>
+<p>open（）方法：  </p>
+<blockquote>
+<p>window.open(“弹出窗口的URL”,”窗口名称”,”窗口特征”)；</p>
+</blockquote>
+<p>窗口特征属性  </p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>&emsp;</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>height、width</td>
+<td></td>
+<td>窗口文档显示区的高度、宽度，亿像素计。</td>
+</tr>
+<tr>
+<td>left、top</td>
+<td></td>
+<td>窗口的x、y坐标</td>
+</tr>
+<tr>
+<td>toolbar=yes/no/1/0</td>
+<td></td>
+<td>是否显示浏览器的工具栏，默认yes</td>
+</tr>
+<tr>
+<td>scrollbars=yes/no/1/0</td>
+<td></td>
+<td>是否显示滚动条，默认yes</td>
+</tr>
+<tr>
+<td>location=yes/no/1/0</td>
+<td></td>
+<td>是否显示地址栏，默认yes</td>
+</tr>
+<tr>
+<td>status=yes/no/1/0</td>
+<td></td>
+<td>是否添加状态栏，默认yes</td>
+</tr>
+<tr>
+<td>menubar=yes/no/1/0</td>
+<td></td>
+<td>是否显示菜单栏，默认yes</td>
+</tr>
+<tr>
+<td>resizable=yes/no/1/0</td>
+<td></td>
+<td>窗口是否可调节尺寸，默认yes</td>
+</tr>
+<tr>
+<td>titlebar=yes/no/1/0</td>
+<td></td>
+<td>是否显示标题栏，默认yes</td>
+</tr>
+<tr>
+<td>fullscreen=yes/no/1/0</td>
+<td></td>
+<td>是否使用全屏模式显示浏览器，默认no</td>
+</tr>
+</tbody></table>
+<h2 id="history对象"><a href="#history对象" class="headerlink" title="history对象"></a>history对象</h2><p>history对象提供用户最近浏览过的URL列表。但出于隐私方面的原因， history对象不再允许脚本访问已经访问过的实际URL，可以使用 history对象提供的、逐个返回访问过的页面的方法</p>
+<p>history对象方法</p>
+<table>
+<thead>
+<tr>
+<th align="right">名称</th>
+<th>&emsp;</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">back()</td>
+<td></td>
+<td>加载history对象列表中的前一个URL</td>
+</tr>
+<tr>
+<td align="right">forward()</td>
+<td></td>
+<td>加载history对象列表中的后一个URL</td>
+</tr>
+<tr>
+<td align="right">go()</td>
+<td></td>
+<td>加载history对象列表中的某一个具体URL</td>
+</tr>
+</tbody></table>
+<br/>
+
+<p>back()方法会让浏览器加载前一个浏览过的文档， history.back()等效于浏览器中的“后退”按钮。<br>forward()方法会让浏览器加载后一个浏览过的文档， history， forward()等效于浏览器中的前进”按钮”<br>go(n)方法中的n是一个具体的数字，当n＞0时，装入历史列表中往前数的第n个页面:当n＝0时，装入当前页面:当n＜0时，装入历史列表中往后数的第n个页面。例如:<br>&emsp;&emsp;history.go(1)代表前进1页，相当于浏览器中的“前进”按钮，等价于 forward()方法<br>&emsp;&emsp;history.go(-1)代表后退1页，相当于浏览器中的“后退”按钮，等价于back)方法  </p>
+<h2 id="location对象"><a href="#location对象" class="headerlink" title="location对象"></a>location对象</h2><p>location对象提供当前页面的URL信息，并且可以重新装载当前页面或装入新页面</p>
+<p>location对象的属性</p>
+<table>
+<thead>
+<tr>
+<th align="right">名称</th>
+<th>&emsp;</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">host</td>
+<td></td>
+<td>设置或返回主机名和当前URL的端口号</td>
+</tr>
+<tr>
+<td align="right">hostname</td>
+<td></td>
+<td>设置或返回当前URL的主机名</td>
+</tr>
+<tr>
+<td align="right">href</td>
+<td></td>
+<td>设置或返回完整的URL</td>
+</tr>
+</tbody></table>
+<p>location对象的方法</p>
+<table>
+<thead>
+<tr>
+<th align="right">名称</th>
+<th>&emsp;</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">reload()</td>
+<td></td>
+<td>重新加载当前文档</td>
+</tr>
+<tr>
+<td align="right">replace()</td>
+<td></td>
+<td>用新的文档替换当前文档</td>
+</tr>
+</tbody></table>
+<h2 id="Document对象"><a href="#Document对象" class="headerlink" title="Document对象"></a>Document对象</h2><p>常用属性  </p>
+<table>
+<thead>
+<tr>
+<th align="right">名称</th>
+<th>&emsp;</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">referrer</td>
+<td></td>
+<td>返回载入当前文档的URL</td>
+</tr>
+<tr>
+<td align="right">URL</td>
+<td></td>
+<td>返回当前文档的URL</td>
+</tr>
+<tr>
+<td align="right"><br/></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="right">常用方法</td>
+<td></td>
+<td></td>
 </tr>
 </tbody></table>
 <table>
 <thead>
 <tr>
-<th align="left">方类别法</th>
-<th align="left">运算符号</th>
+<th align="center">名称</th>
+<th>&emsp;</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">算数运算符</td>
-<td align="left">+、-、*、/、%、++、–</td>
+<td align="center">getElementById（）</td>
+<td></td>
+<td>返回对拥有指定id的第一个对象的引用</td>
 </tr>
 <tr>
-<td align="left">比较运算符</td>
-<td align="left">&gt;、&lt;、&gt;=、&lt;=、==、！=、===、！==</td>
+<td align="center">getElementByName（）</td>
+<td></td>
+<td>返回带有指定名称的对象的集合</td>
 </tr>
 <tr>
-<td align="left">逻辑运算符</td>
-<td align="left">&amp;&amp;、`</td>
+<td align="center">getElementByTagName（）</td>
+<td></td>
+<td>返回带有指定标签名称的对象的集合</td>
 </tr>
 <tr>
-<td align="left">赋值运算符</td>
-<td align="left">=、+=、-=</td>
-</tr>
-<tr>
-<td align="left">逻辑控制语句</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">条件结构：</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(表达式)&#123;</span><br><span class="line">    语句1；</span><br><span class="line">&#125;else&#123;</span><br><span class="line">    语句2；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">switch结构：</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">switch(表达式)&#123;</span><br><span class="line">    case 值1：</span><br><span class="line">        语句1；</span><br><span class="line">    case 值2：</span><br><span class="line">        语句2；</span><br><span class="line">    default：</span><br><span class="line">        语句；</span><br><span class="line">        break；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">循环结构</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">for循环</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(初始化；条件；增量或减量)&#123;</span><br><span class="line">    语句；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">while循环</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">while(条件)&#123;</span><br><span class="line">    语句；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">do-while循环</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">do&#123;</span><br><span class="line">    语句</span><br><span class="line">&#125;while(条件)；</span><br></pre></td></tr></table></figure></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">for-in循环</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(变量 in 对象)&#123;</span><br><span class="line">    语句；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">输入提示框：prompt（）；</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">输出提示框：alert（）；</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">类型转换：</td>
-<td align="left"></td>
+<td align="center">write（）</td>
+<td></td>
+<td>向文档写文本、HTML表达式或JavaScript代码</td>
 </tr>
 </tbody></table>
+<p>动态改变层。标签中的内容  </p>
+<blockquote>
+<p>document.getElementById(“id名”).innerHTML=”内容”;<br>innerHTML是几乎所有的HTML元素都有的属性。它是一个字符串，用来设置或获取当前对象的开始标签和结束标签之间的内容  </p>
+</blockquote>
+<p>访问相同name的元素，获取元素内容</p>
+<blockquote>
+<p>var aInput=getElementByName（”name”）;<br>aInput.value</p>
+</blockquote>
+<h1 id="JavaScript内置对象"><a href="#JavaScript内置对象" class="headerlink" title="JavaScript内置对象"></a>JavaScript内置对象</h1><p>在 Javascript I中.系统的内置对象有Date对象、Aray对象、 String对象和Math对象等</p>
+<blockquote>
+<p>Date:用于操作日期和时间<br>Aray:用于在单独的变量名中存储一系列的值。<br>String:用于支持对字符串的处理<br>Math:使我们有能力执行常用的数学任务，它包含了若干个数字常量和函数。</p>
+</blockquote>
+<p>其中.Aray对象和 String对象前面已经学习过，下面将介绍Date对象和Math对象</p>
+<h2 id="Date对象"><a href="#Date对象" class="headerlink" title="Date对象"></a>Date对象</h2><p>Javascript中的对象与 Java中的类非常相似.需要使用＂new对象名()”的方法创建一个实例<br>语法<br>var日期实例＝ new Date(参数)<br>日期实例是存储Date对象的变量。可以省略参数，如果没有参数则表示当前时间和日期<br>例如<br>var today＝ new Date();/将当前日期和时间存储在变量today中<br>参数是字符串格式MD.YY.hms表示日<br>var date=new Date (July 15, 2013, 16: 34: 28”)  </p>
+<p>Date对象的常用方法  </p>
 <table>
 <thead>
 <tr>
-<th align="left">方法</th>
-<th>&emsp;&emsp;</th>
-<th align="left">描述</th>
+<th align="right">名称</th>
+<th>&emsp;</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">parseInt(“字符串”)</td>
+<td align="right">getDate（）</td>
 <td></td>
-<td align="left">将字符串转换为整型数字</td>
+<td>返回Date对象的一个月中的每一天，其值为1～31</td>
 </tr>
 <tr>
-<td align="left">parseFloat(“字符串”)</td>
+<td align="right">getday（）</td>
 <td></td>
-<td align="left">将字符串转换为浮点型数字</td>
+<td>返回Date对象的星期中的每一天，其值为0～6</td>
 </tr>
 <tr>
-<td align="left">isNaN（）</td>
+<td align="right">getHours（）</td>
 <td></td>
-<td align="left">用于检查参数是否是非数字</td>
+<td>返回Date对象的小时数，其值为0～23</td>
+</tr>
+<tr>
+<td align="right">getMinutes（）</td>
+<td></td>
+<td>返回Date对象的分钟数，其值为0～59</td>
+</tr>
+<tr>
+<td align="right">getSeconds（）</td>
+<td></td>
+<td>返回Date对象的秒数，其值为0～59</td>
+</tr>
+<tr>
+<td align="right">getMonth（）</td>
+<td></td>
+<td>返回Date对象的月份，其值为0～11</td>
+</tr>
+<tr>
+<td align="right">getFullYear（）</td>
+<td></td>
+<td>返回Date对象的年份，其值为四位数</td>
+</tr>
+<tr>
+<td align="right">getTime（）</td>
+<td></td>
+<td>返回自某一时刻(1970年1月1日)以来的毫秒数</td>
 </tr>
 </tbody></table>
-<p>定义函数：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function 函数名（参数1，参数2，...）&#123;</span><br><span class="line">    语法；</span><br><span class="line">    [返回值；]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>调用函数<br>&emsp;&emsp;函数调用一般和表单元素的事件一起使用，调用格式：事件名=“函数名（）”  </p>
+<p>getfullyear()返回四位数的年份， get Year()返回二位或四位的年份，常用于获取年份getfullyear()。<br>获取星期几使用 getday(): 0表示周日,1表示周一，6表示周六<br>例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var today = new Date()        //获得当前时间</span><br><span class="line">var hh = today.gethours();    //获得小时、分钟、秒</span><br><span class="line">var mm = today.getminutes();  //获得分钟</span><br><span class="line">var ss = today.getSeconds();  //获得秒</span><br></pre></td></tr></table></figure>
+
+<br/>
+math对象常用方法   
+
+
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th>&emsp;</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">celi（）</td>
+<td></td>
+<td>对数进行上舍入</td>
+</tr>
+<tr>
+<td align="center">floor（）</td>
+<td></td>
+<td>对数进行下舍入</td>
+</tr>
+<tr>
+<td align="center">round（）</td>
+<td></td>
+<td>把数四舍五入为最接近的数</td>
+</tr>
+<tr>
+<td align="center">random（）</td>
+<td></td>
+<td>返回0~1中的随机数</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>例：<br>1-100之间的随机数：Math.floor(Math.random()<em>100+1);<br>2-98之间的随机数：Math.floor(Math.random()</em>98+2);</p>
+</blockquote>
+<h2 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h2><p>setTimeout（）用于在指定的毫秒后调用函数或计算表达式  </p>
+<blockquote>
+<p>语法：setTimeout（“调用的函数名称”，等待的毫秒数） </p>
+</blockquote>
+<p>setInterval（）可按照指定的周期（毫秒）来调用函数或计算表达式  </p>
+<blockquote>
+<p>语法：setInterval（“调用的函数名称”，周期性调用函数之间间隔的毫秒数）  </p>
+</blockquote>
+<p>setTimeout（）是按指定时间后调用函数，setInterval（）是以指定时间为间隔，不停的调用函数</p>
+<h3 id="clearTimeout-和clearInterval"><a href="#clearTimeout-和clearInterval" class="headerlink" title="clearTimeout()和clearInterval()"></a>clearTimeout()和clearInterval()</h3><p>clearTimeout()是用来清除setTimeout（）函数设置的定时器<br>clearInterval()是用来清除setInterval（）函数设置的定时器<br>语法  </p>
+<blockquote>
+<p>clearTimeout(setTimeout（）的返回值)<br>clearInterval(setInterval（）的返回值)  </p>
+</blockquote>
 
     </div>
 </article>
@@ -608,17 +784,17 @@
 
                 
                 <li>
-                    <a href="/2019/11/24/Javascript%E5%9F%BA%E7%A1%80/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2019/11/25/JavaScript%E6%93%8D%E4%BD%9CBOM/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/2019/11/24/Javascript%E5%9F%BA%E7%A1%80/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2019/11/25/JavaScript%E6%93%8D%E4%BD%9CBOM/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/2019/11/24/Javascript%E5%9F%BA%E7%A1%80/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2019/11/25/JavaScript%E6%93%8D%E4%BD%9CBOM/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -626,11 +802,11 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/HTML/" style="font-size: 16.786837013078355px;" class="tag-cloud-link">HTML</a>
+    <a href="/tags/HTML/" style="font-size: 12.704701129585686px;" class="tag-cloud-link">HTML</a>
     
-    <a href="/tags/Javascript/" style="font-size: 10.832476439589906px;" class="tag-cloud-link">Javascript</a>
+    <a href="/tags/Javascript/" style="font-size: 8.643993451101535px;" class="tag-cloud-link">Javascript</a>
     
-    <a href="/tags/%E6%A0%87%E7%AD%BE/" style="font-size: 18.428650878708083px;" class="tag-cloud-link">标签</a>
+    <a href="/tags/%E6%A0%87%E7%AD%BE/" style="font-size: 8.292922168258897px;" class="tag-cloud-link">标签</a>
     
 </div>
                 
