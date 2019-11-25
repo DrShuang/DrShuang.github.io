@@ -13,7 +13,7 @@
     
     
     
-    <title>index | 小小程序员的博客</title>
+    <title>JavaScript基础篇 | 小小程序员的博客</title>
     <link href="https://drshuang.github.io" rel="prefetch" />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -165,19 +165,19 @@
         <i class="fa fa-home"></i>
         <a href="https://drshuang.github.io">小小程序员的博客</a>
         >
-        <span>index</span>
+        <span>JavaScript基础篇</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/2019/11/16/index/">index</a>
+                <a href="/2019/11/24/Javascript%E5%9F%BA%E7%A1%80/">JavaScript基础篇</a>
             </h1>
         </div>
         <div class="tag-article">
             
             <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2019-11-16
+                <i class="fa fa-calendar"></i> 2019-11-24
             </span>
             
         </div>
@@ -187,11 +187,11 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/2019/11/16/index/">index</a>
+                    <a href="/2019/11/24/Javascript%E5%9F%BA%E7%A1%80/">JavaScript基础篇</a>
                 </h4>
             </div>
             <p>
-                <i class="fa fa-calendar"></i> 2019-11-16
+                <i class="fa fa-calendar"></i> 2019-11-24
             </p>
             <p>
                 
@@ -200,40 +200,93 @@
         </center>
     </div>
     <div class="content-article">
-        <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title></title>
-		<script type="text/javascript">
-		var d=new Date();
-		var h=d.getHours();
-		var m=d.getMinutes();
-		var s=d.getSeconds();
-//		document.write(h+":"+m+":"+s);
-//		document.getElementsById("gh").innerHTML=h+":"+m+":"+s;
-		document.getElementsById("gh").innerHTML="1234";
-		</script>
-	</head>
-	<body>
-		<form action="" method="post">
-			
-			<div id="gh">
-				
-			</div>
-		</form>
-	<h3 id="gh">
-		
-	</h3>
-		
-		
-		
-		
-		
-		
-		
-	<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":165,"height":350,"hOffset":40,"vOffset":10},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"dialog":{"hitokotooptional":true},"log":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":165,"height":350,"hOffset":40,"vOffset":10},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"dialog":{"hitokotooptional":true},"log":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":165,"height":350,"hOffset":40,"vOffset":10},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"dialog":{"hitokotooptional":true},"log":false});</script></body>
-</html>
+        <h1 id="什么是-Javascript"><a href="#什么是-Javascript" class="headerlink" title="什么是 Javascript"></a>什么是 Javascript</h1><p>&emsp;&emsp;Javascript是一种描述性语言，也是一种基于对象( Object)和事件驱动( Event Driven)的.并<br>具有安全性能的脚本语言。它与HTML(超文本标记语言)一起。在一个Web页面中链接多个对象<br>与Wb客户实现交互。无论在客户端还是在服务器端， Javascript I应用程序都要下载到浏览器的客户<br>端执行，从而减轻了服务器端的负担。总结其特点如下   </p>
+<ol>
+<li>Javascript主要用来在HTML页面中添加交互行为。  </li>
+<li>Javascript是一种脚本语言，语法和Java类似。   </li>
+<li>Javascript一般用来编写客户端的脚本。   </li>
+<li>Java  7 cript是一种解释性语音,边编译边执行。</li>
+</ol>
+<h1 id="Javascript的组成"><a href="#Javascript的组成" class="headerlink" title="Javascript的组成"></a>Javascript的组成</h1><p>&emsp;&emsp;尽管 Cmascript是一个重要的标准，但它并不是 Javascript I唯一的部分，当然，它也不是唯一<br>被标准化的部分。实际上，一个完整的 Javascript是由以下三个不同的部分组成的：ECMAScript、BOM、DOM。</p>
+<p>一、Ecmascript标准<br>Ecmascript是一种开放的、被国际上广为接受的、标准的脚本语言规范。它不与任何具体的浏<br>览器绑定。 Ecmascript 7标准主要描述了以下内容。</p>
+<ol>
+<li>语法</li>
+<li>变量和数据类型</li>
+<li>运算符</li>
+<li>逻辑控制语句</li>
+<li>关键字、保留字</li>
+<li>对象</li>
+</ol>
+<p>ECMASCRIPT是一个描述，规定了脚本语言的所有属性、方法和对象的标准，因此在使用Web客<br>白端脚本语言编码时一定要遵循 Ecmascript标准。</p>
+<p>二、浏览器对象模型<br>&emsp;&emsp;浏览器对象模型( Browser Object Model，BoM)，提供了独立于内容与浏览器窗口进行交互的对<br>象，使用浏览器对象模型可以实现与 HTML的交互，如网上常见的弹出窗口.前进后退等功能都是<br>浏览器对象控制的  </p>
+<p>三、文档对象模型<br>&emsp;&emsp;文档对象模型( Document Object Model，DOM)，是HTML文档对象模型( HTML DON)定义的一套标准方法，用来访问和操纵HTML文档，如网上商城常见的随鼠标移动显示大的图片、弹出小提示等都是文档对象的功劳。  </p>
+<h2 id="Javascript的基本结构"><a href="#Javascript的基本结构" class="headerlink" title="Javascript的基本结构"></a>Javascript的基本结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/Javascript&quot;&gt;</span><br><span class="line">    javaScript语句;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Javascript引入方式"><a href="#Javascript引入方式" class="headerlink" title="Javascript引入方式"></a>Javascript引入方式</h2><p>内部引入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/Javascript&quot;&gt;</span><br><span class="line">    javaScript语句;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>外部引入  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/Javascript src=&quot;Javascript文件地址&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Javascript核心语法"><a href="#Javascript核心语法" class="headerlink" title="Javascript核心语法"></a>Javascript核心语法</h2><p>变量的声明和赋值<br>&emsp;&emsp;声明：var 变量名;<br>&emsp;&emsp;赋值：变量名=值;<br>边声明边赋值<br>var 变量名=值;<br>&emsp;&emsp;var 变量名1=值，变量名2=值，……;<br>数据类型<br>&emsp;&emsp;在JavaScript中声明时不需要声明变量的数据类型，而是有赋值的变量值决定，在JavaScript中提供的数据类型有一下几种：</p>
+<ol>
+<li>undefined(未定义类型)</li>
+<li>null(空类型)</li>
+<li>number(数值类型)</li>
+<li>String(字符串类型)</li>
+<li>boolean(布尔类型)  </li>
+</ol>
+<p>ECMAScript提供了typeof运算符来判断一个值或变量的数据类型<br>&emsp;&emsp;typeof(变量或值)<br>其返回结果有以下几种。  </p>
+<ol>
+<li>undefined:如果变量是 undefined类型的，则返回 undefined类型的结果  </li>
+<li>number:如果变量是 number类型的，则返回 number类型的结果  </li>
+<li>String:如果变量是 String类型的，则返回 string类型的结果。  </li>
+<li>boolean:如果变量是 boolean类型的，则返回 boolean类型的结果</li>
+<li>object：如果变量是nul类型，或者变量是一种引用类型，如对象、函数、数组，则返回object类型的结果<br>在number中有个特殊值NaN（not a number）表示非数  </li>
+</ol>
+<p>String类型<br>方法：字符串对象.方法名（）；<br>|方法|描述|<br>|:—–|:—–|<br>|charAt(undex)|返回指定位置的字符  |<br>|indexof(str，index)|查找某个字符在字符串中的位置  |<br>|substring(index1,index2)|返回指定索引index1和index2之间的字符（返回的字符串包含index1不包含index2）<br>|split(str)|将字符串分割字符串数组  |<br>|length|返回字符串的长度|<br>数组<br>创建数组：var 数组名=new Array（数组长度）；<br>赋值：  </p>
+<ol>
+<li>var 数组名=new Array（值1，值2，…）；</li>
+<li>var 数组名=new Array（数组长度）；<br>数组名[下标]=值；</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">length</td>
+<td align="left">设置或返回数组中元素的数目</td>
+</tr>
+<tr>
+<td align="left">jion()</td>
+<td align="left">把数组的所有元素放入一个字符串，通过分隔符进分割</td>
+</tr>
+<tr>
+<td align="left">sort()</td>
+<td align="left">对数组排序</td>
+</tr>
+<tr>
+<td align="left">push()</td>
+<td align="left">向数组末尾添加一个或更多元素，并返回新的长度</td>
+</tr>
+</tbody></table>
+<p>运算符<br>|类别|运算符号|<br>|:—–|:—–|<br>|算数运算符|+、-、*、/、%、++、–|<br>|比较运算符|&gt;、&lt;、&gt;=、&lt;=、==、！=、===、！==|<br>|逻辑运算符|&amp;&amp;、<code>||</code>、！|<br>|赋值运算符|=、+=、-=|</p>
+<p>逻辑控制语句<br>条件结构： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(表达式)&#123;</span><br><span class="line">    语句1；</span><br><span class="line">&#125;else&#123;</span><br><span class="line">    语句2；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>switch结构：  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">switch(表达式)&#123;</span><br><span class="line">    case 值1：</span><br><span class="line">        语句1；</span><br><span class="line">    case 值2：</span><br><span class="line">        语句2；</span><br><span class="line">    default：</span><br><span class="line">        语句；</span><br><span class="line">        break；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>循环结构<br>for循环</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(初始化；条件；增量或减量)&#123;</span><br><span class="line">    语句；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>while循环</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">while(条件)&#123;</span><br><span class="line">    语句；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>do-while循环</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">do&#123;</span><br><span class="line">    语句</span><br><span class="line">&#125;while(条件)；</span><br></pre></td></tr></table></figure>
+<p>for-in循环</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(变量 in 对象)&#123;</span><br><span class="line">    语句；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输入提示框：prompt（）；<br>输出提示框：alert（）；<br>类型转换：<br>|方法|描述|<br>|:—-|:—-|<br>|parseInt(“字符串”)|将字符串转换为整型数字|<br>|parseFloat(“字符串”)|将字符串转换为浮点型数字|<br>|isNaN（）|用于检查参数是否是非数字|</p>
+<p>定义函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function 函数名（参数1，参数2，...）&#123;</span><br><span class="line">    语法；</span><br><span class="line">    [返回值；]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>调用函数<br>&emsp;&emsp;函数调用一般和表单元素的事件一起使用，调用格式：事件名=“函数名（）”  </p>
 
     </div>
 </article>
@@ -296,7 +349,7 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2019/11/16/index/">index</a>
+                    <a href="/2019/11/24/Javascript%E5%9F%BA%E7%A1%80/">JavaScript基础篇</a>
                 </span>
             </li>
             
@@ -336,25 +389,25 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2019/11/16/index/">index</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
                     <a href="/2019/11/10/HTML%E5%9F%BA%E6%9C%AC%E6%A0%87%E7%AD%BE/">HTML标签</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2019/11/06/%E4%B8%80%E6%9D%AF%E7%88%B1%E7%9A%84%E6%84%9F%E5%8A%A8/">一杯爱的感动</a>
+                    <a href="/2019/11/24/Javascript%E5%9F%BA%E7%A1%80/">JavaScript基础篇</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
                     <a href="/2019/11/05/hello-world/">Hello World</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/11/06/%E4%B8%80%E6%9D%AF%E7%88%B1%E7%9A%84%E6%84%9F%E5%8A%A8/">一杯爱的感动</a>
                 </span>
             </li>
             
@@ -369,17 +422,17 @@
 
                 
                 <li>
-                    <a href="/2019/11/16/index/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2019/11/24/Javascript%E5%9F%BA%E7%A1%80/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/2019/11/16/index/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2019/11/24/Javascript%E5%9F%BA%E7%A1%80/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/2019/11/16/index/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2019/11/24/Javascript%E5%9F%BA%E7%A1%80/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -387,9 +440,9 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/HTML/" style="font-size: 15.120026173772054px;" class="tag-cloud-link">HTML</a>
+    <a href="/tags/HTML/" style="font-size: 13.846791881138813px;" class="tag-cloud-link">HTML</a>
     
-    <a href="/tags/%E6%A0%87%E7%AD%BE/" style="font-size: 18.2227935038596px;" class="tag-cloud-link">标签</a>
+    <a href="/tags/%E6%A0%87%E7%AD%BE/" style="font-size: 15.764101024813462px;" class="tag-cloud-link">标签</a>
     
 </div>
                 
