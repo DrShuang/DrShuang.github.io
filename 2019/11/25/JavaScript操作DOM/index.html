@@ -129,15 +129,15 @@
                         
                         
                         <li>
-                            <a href="/tags/HTML/">HTML</a>
-                        </li>
-                        
-                        <li>
                             <a href="/tags/Javascript/">Javascript</a>
                         </li>
                         
                         <li>
                             <a href="/tags/%E6%A0%87%E7%AD%BE/">标签</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/HTML/">HTML</a>
                         </li>
                         
                         
@@ -400,7 +400,8 @@
 </tr>
 </tbody></table>
 <p>方法 replacechild(newnode， oldnode)中的两个参数， newnode是替换的新节点， oldnode是要被替换的节点。  </p>
-<h2 id="style属性"><a href="#style属性" class="headerlink" title="style属性"></a>style属性</h2><table>
+<h2 id="style属性"><a href="#style属性" class="headerlink" title="style属性"></a>style属性</h2><p>常用属性</p>
+<table>
 <thead>
 <tr>
 <th>类别</th>
@@ -429,7 +430,108 @@
 <td>borderTop、borderBottom、borderLeft、borderRight</td>
 </tr>
 </tbody></table>
-<h2 id="常用事件"><a href="#常用事件" class="headerlink" title="常用事件"></a>常用事件</h2><p>描述属性<br>—–|—–|—–<br>onclick||当用户单击某个对象时调用事件<br>onmouseover||鼠标移到某元素之上<br>onmouseout||鼠标从某元素移开<br>onmousedown||鼠标按钮被按下</p>
+<p>常用事件</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>&emsp;</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>onclick</td>
+<td></td>
+<td>当用户单击某个对象时调用事件</td>
+</tr>
+<tr>
+<td>onmouseover</td>
+<td></td>
+<td>鼠标移到某元素之上</td>
+</tr>
+<tr>
+<td>onmouseout</td>
+<td></td>
+<td>鼠标从某元素移开</td>
+</tr>
+<tr>
+<td>onmousedown</td>
+<td></td>
+<td>鼠标按钮被按下</td>
+</tr>
+</tbody></table>
+<h2 id="className属性"><a href="#className属性" class="headerlink" title="className属性"></a>className属性</h2><p>在 HTML DOM中，className属性可设置或返回元素的 class样式<br>语法<br>HTML元素.classname＝＂样式名称”  </p>
+<h2 id="获取元素样式"><a href="#获取元素样式" class="headerlink" title="获取元素样式"></a>获取元素样式</h2><p>语法<br>HTML元素.style.样式属性  </p>
+<p>在 javascript I中，使用＂HTML元素.style.样式属性 ”的方式只能获取内联样式的属性值，无法获取内部样式表或外部样式表中的属性值，但是在实际工作中通常是样式和内容相分离的、所以实际工作中并不用“HTML元素. style.样式属性”这种方式获取样式的属性值<br>微软为每个元素提供了一个 currentStyle对象，它包含了所有元素的style对象的特性和任何未被覆盖的CSS规则的style特性，currentStyle对象与style对象的使用方式一样<br>语法<br>HTML元素. currentstyle.样式属性  </p>
+<p>虽然使用 currentstyle可以获取样式属性的值，但是它只局限于E浏览器，其他浏览器却无法获取样式的属性值.不过DOM提供了ー个 getComputedStyle()方法，这个方法接收两个参数，需要获取样式的属性值。<br>语法<br>document.defaultview. getcomputedstyle(元素，nu11).属性;  </p>
+<p>HTML中元素的属性  </p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>&emsp;</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>offsetLeft</td>
+<td></td>
+<td>返回当前元素左边界到它上级元素的左边界的距离，只读属性</td>
+</tr>
+<tr>
+<td>offsetTop</td>
+<td></td>
+<td>返回当前元素上边界到它上级元素的上边界的距离，只读属性</td>
+</tr>
+<tr>
+<td>offsetHeight</td>
+<td></td>
+<td>返回元素的高度</td>
+</tr>
+<tr>
+<td>offsetWidth</td>
+<td></td>
+<td>返回元素的宽度</td>
+</tr>
+<tr>
+<td>offsetParent</td>
+<td></td>
+<td>返回元素的偏移容器，即对最近的动态定位的包含元素的引用</td>
+</tr>
+<tr>
+<td>scrollTop</td>
+<td></td>
+<td>返回匹配元素的滚动条的垂直位置</td>
+</tr>
+<tr>
+<td>scrollLeft</td>
+<td></td>
+<td>返回匹配元素的滚动条的水平位置</td>
+</tr>
+<tr>
+<td>clientWidth</td>
+<td></td>
+<td>返回元素的可见宽度</td>
+</tr>
+<tr>
+<td>clientHeight</td>
+<td></td>
+<td>返回元素的可见高度</td>
+</tr>
+</tbody></table>
+<p>在网页中要实现获取滚动条滚动距离，这就需要使用 scrollTop、 scrollLeft这丙个属性，获得的数值单位是像素(px)，对于不滚动的元素，这两个属性值总是0。这两个属性获取滚动条在窗口中滚动的距离，语法如下。<br>语法  </p>
+<blockquote>
+<p>document, documentelement scrolltop:<br>document documentelement, scroll Left:  </p>
+</blockquote>
+<p>或者</p>
+<blockquote>
+<p>document, body scroll Top:<br>document body. scrollleft:</p>
+</blockquote>
+<p>以上两种写法的两句代码分别可以获取滚动条距窗口顶端和左测滚动的距离，这两种写法稍有不同，标准浏览器只认识 document.documentElement.scrollTop这种写法，但是 Chrome却不认识该写法,在有文档声明时， Chrome只认识 document.body.scrollTop，所以这两种写法在同一个浏览器中只会有一个值生效。例如，当document.body.scrollTop能取到值时document.documentElement.scrollTop就会始终为0,反之亦然。所以要想得到网页真正的 scrolltop值,可以这样写  :  </p>
+<blockquote>
+<p>var stop=document.documentElement.scrollTop || document.body.scrollTop;  </p>
+</blockquote>
+<p>这样，两个值总会有一个恒为0.所以不用担心会对真正的 scrollTop造成影响。但是仅仅使用这两个属性还无法完成随鼠标滚动的图片效果，还需要有事件来触发。在 Javascript中.一个onscroll页面加载事件，在前面的章节中已经学习:另外一个 onscroll事件用于捕捉页面垂直或水平的滚动。</p>
 
     </div>
 </article>
@@ -544,19 +646,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2019/11/10/HTML%E5%9F%BA%E6%9C%AC%E6%A0%87%E7%AD%BE/">HTML标签</a>
+                    <a href="/2019/11/25/JavaScript%E6%93%8D%E4%BD%9CDOM/">JavaScript操作DOM</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
                     <a href="/2019/11/25/JavaScript%E6%93%8D%E4%BD%9CBOM/">JavaScript操作BOM</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2019/11/25/JavaScript%E6%93%8D%E4%BD%9CDOM/">JavaScript操作DOM</a>
                 </span>
             </li>
             
@@ -575,6 +671,12 @@
             <li class="list-group-item">
                 <span class="post-title">
                     <a href="/2019/11/06/%E4%B8%80%E6%9D%AF%E7%88%B1%E7%9A%84%E6%84%9F%E5%8A%A8/">一杯爱的感动</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/11/10/HTML%E5%9F%BA%E6%9C%AC%E6%A0%87%E7%AD%BE/">HTML标签</a>
                 </span>
             </li>
             
@@ -607,11 +709,11 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/HTML/" style="font-size: 15.943619413957025px;" class="tag-cloud-link">HTML</a>
+    <a href="/tags/Javascript/" style="font-size: 8.795917794740417px;" class="tag-cloud-link">Javascript</a>
     
-    <a href="/tags/Javascript/" style="font-size: 15.820680412775918px;" class="tag-cloud-link">Javascript</a>
+    <a href="/tags/%E6%A0%87%E7%AD%BE/" style="font-size: 14.284729448645455px;" class="tag-cloud-link">标签</a>
     
-    <a href="/tags/%E6%A0%87%E7%AD%BE/" style="font-size: 15.20043457054443px;" class="tag-cloud-link">标签</a>
+    <a href="/tags/HTML/" style="font-size: 15.756057259988832px;" class="tag-cloud-link">HTML</a>
     
 </div>
                 
